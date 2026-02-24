@@ -204,13 +204,6 @@ header {
     overflow: hidden;
 }
 
-.hero-nova::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 70% 30%, rgba(0,245,160,0.08), transparent 60%);
-}
-
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -457,9 +450,5 @@ footer {
 
     .nav-menu.active {
         transform: translateX(0);
-    }
-
-    .hero-nova {
-        background: url("img/heromobile.webp") center center / cover no-repeat;
     }
 }

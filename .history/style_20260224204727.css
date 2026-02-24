@@ -459,7 +459,10 @@ footer {
         transform: translateX(0);
     }
 
+
+@media (max-width: 768px) {
     .hero-nova {
         background: url("img/heromobile.webp") center center / cover no-repeat;
     }
+}
 }
