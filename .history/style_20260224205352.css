@@ -200,7 +200,7 @@ header {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url("img/pexels-ardit-mbrati-216809103-18187618.jpg") center center / cover no-repeat;
+    background: url("img/") center center / cover no-repeat;
     overflow: hidden;
 }
 
