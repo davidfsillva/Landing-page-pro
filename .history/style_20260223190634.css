@@ -1,0 +1,335 @@
+/* ========================================
+   RESET & BASE
+======================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section {
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   CSS VARIABLES
+======================================== */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --secondary: #0f172a;
+  --accent: #22c55e;
+
+  --bg: #0b0f19;
+  --bg-light: #111827;
+  --card-bg: #1f2937;
+
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+
+  --radius: 12px;
+  --transition: all 0.3s ease;
+  --shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ========================================
+   HEADER
+======================================== */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--text);
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: var(--bg-light);
+  padding: 20px;
+  border-radius: var(--radius);
+}
+
+.menu a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.menu a:hover {
+  color: var(--primary);
+}
+
+.menu.active {
+  display: flex;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ========================================
+   HERO
+======================================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, #0b0f19, #111827);
+  padding-top: 120px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+/* CTA BUTTON */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  background: var(--primary-dark);
+}
+
+/* ========================================
+   PROBLEM SECTION
+======================================== */
+.problem {
+  background: var(--bg-light);
+  text-align: center;
+}
+
+.problem h2 {
+  margin-bottom: 20px;
+}
+
+.problem p {
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   SOLUTION
+======================================== */
+.solution {
+  text-align: center;
+}
+
+.solution h2 {
+  margin-bottom: 20px;
+}
+
+.solution p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-muted);
+}
+
+/* ========================================
+   BENEFITS CARDS
+======================================== */
+.benefits-grid {
+  display: grid;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: var(--radius);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--text-muted);
+}
+
+/* ========================================
+   TESTIMONIALS
+======================================== */
+.testimonials {
+  background: var(--bg-light);
+  text-align: center;
+}
+
+.testimonial {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: var(--radius);
+  margin-top: 30px;
+}
+
+.testimonial p {
+  color: var(--text-muted);
+}
+
+.testimonial strong {
+  display: block;
+  margin-top: 15px;
+}
+
+/* ========================================
+   AUTHORITY
+======================================== */
+.authority {
+  text-align: center;
+}
+
+.authority h2 {
+  margin-bottom: 20px;
+}
+
+.authority p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-muted);
+}
+
+/* ========================================
+   FINAL CTA
+======================================== */
+.cta-final {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: var(--radius);
+}
+
+.cta-final h2 {
+  margin-bottom: 20px;
+}
+
+.cta-final .btn-primary {
+  background: #fff;
+  color: var(--primary-dark);
+}
+
+.cta-final .btn-primary:hover {
+  background: #f1f5f9;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+footer {
+  background: #05070d;
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ========================================
+   REVEAL ANIMATION
+======================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   RESPONSIVE DESKTOP
+======================================== */
+@media (min-width: 768px) {
+
+  .menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}

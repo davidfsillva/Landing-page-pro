@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aumente sua produtividade com nossa solução SaaS. A ferramenta definitiva para gestão de leads.">
+    <title>SaaSPro | A Revolução na sua Gestão</title>
+    
+    <meta property="og:title" content="SaaSPro - Gestão Inteligente">
+    <meta property="og:description" content="Converta mais leads com menos esforço.">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #22c55e;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --container: 1200px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        /* Helpers de Animação */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Header & Nav */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        nav {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary); }
+
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; transition: var(--transition); }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 2rem 100px;
+            background: radial-gradient(circle at top right, #eff6ff 0%, #ffffff 50%);
+            text-align: center;
+        }
+
+        .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1.5rem; color: var(--dark); }
+        .hero p { font-size: 1.25rem; color: var(--gray); max-width: 700px; margin: 0 auto 2rem; }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.4);
+            background: var(--primary-hover);
+        }
+
+        /* Seção Problema (PAS) */
+        .problem-section { padding: 100px 2rem; background: #fff; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: var(--container);
+            margin: 0 auto;
+        }
+
+        .card {
+            padding: 2rem;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            transition: var(--transition);
+        }
+
+        .card:hover { border-color: var(--primary); transform: scale(1.02); }
+
+        /* Stats Section */
+        .stats { background: var(--dark); color: white; padding: 60px 2rem; text-align: center; }
+        .stats-grid { 
+            display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem;
+            max-width: var(--container); margin: 0 auto;
+        }
+        .stat-item h3 { font-size: 3rem; color: var(--primary); }
+
+        /* Form Section */
+        .cta-section { padding: 100px 2rem; background: #f1f5f9; }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+        }
+
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+        input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            outline: none;
+        }
+        input:focus { border-color: var(--primary); ring: 2px solid var(--primary); }
+
+        .error-msg { color: #ef4444; font-size: 0.85rem; display: none; margin-top: 0.3rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">SaaS<span style="color: var(--dark)">PRO</span></div>
+            <ul class="nav-links">
+                <li><a href="#problema">O Problema</a></li>
+                <li><a href="#solucao">Solução</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+            </ul>
+            <a href="#lead-form" class="btn btn-primary" style="padding: 0.6rem 1.5rem">Começar Agora</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1 class="reveal">Pare de perder leads por falta de <span style="color: var(--primary)">organização</span>.</h1>
+        <p class="reveal">Centralize sua operação, automatize processos chatos e foque no que importa: fechar vendas.</p>
+        <div class="reveal">
+            <a href="#lead-form" class="btn btn-primary">Quero escalar meu negócio</a>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3 class="counter" data-target="98">0</h3>
+                <p>Satisfação</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="1500">0</h3>
+                <p>Empresas Atendidas</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="40">0</h3>
+                <p>% Aumento em Vendas</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="problema" class="problem-section">
+        <div class="section-header reveal">
+            <h2>Por que você ainda não escalou?</h2>
+            <p>A maioria das empresas morre no caos operacional.</p>
+        </div>
+        <div class="cards-grid">
+            <div class="card reveal">
+                <h3>Planilhas Confusas</h3>
+                <p>Dados espalhados que ninguém entende ou atualiza corretamente.</p>
+            </div>
+            <div class="card reveal">
+                <h3>Follow-up Lento</h3>
+                <p>Seu lead esfria enquanto você tenta organizar as tarefas do dia.</p>
+            </div>
+            <div class="card reveal">
+                <h3>Falta de Métricas</h3>
+                <p>Você toma decisões baseadas no "achismo" e não em dados reais.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="lead-form" class="cta-section">
+        <div class="section-header reveal">
+            <h2>Pronto para mudar de nível?</h2>
+            <p>Solicite uma demonstração gratuita com nossos especialistas.</p>
+        </div>
+        
+        <form id="mainForm" novalidate class="reveal">
+            <div class="form-group">
+                <label>Nome Completo</label>
+                <input type="text" id="name" placeholder="Ex: João Silva" required>
+                <span class="error-msg">Por favor, insira seu nome.</span>
+            </div>
+            <div class="form-group">
+                <label>E-mail Corporativo</label>
+                <input type="email" id="email" placeholder="joao@empresa.com" required>
+                <span class="error-msg">Insira um e-mail válido.</span>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%">Enviar e Garantir Vaga</button>
+        </form>
+    </section>
+
+    <footer style="padding: 40px 2rem; text-align: center; border-top: 1px solid #e2e8f0;">
+        <p>&copy; 2026 SaaSPro - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // 1. Reveal on Scroll Effect
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // 2. Contador Animado
+        const counters = document.querySelectorAll('.counter');
+        const runCounters = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / 50;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(runCounters, 30);
+                } else {
+                    counter.innerText = target + (target === 40 ? '%' : '+');
+                }
+            });
+        };
+
+        // Ativa contador quando a seção de stats estiver visível
+        const statsSection = document.querySelector('.stats');
+        const statsObserver = new IntersectionObserver((entries) => {
+            if(entries[0].isIntersecting) runCounters();
+        }, { threshold: 0.5 });
+        statsObserver.observe(statsSection);
+
+        // 3. Validação de Formulário Avançada
+        const form = document.getElementById('mainForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            const inputs = form.querySelectorAll('input');
+            inputs.forEach(input => {
+                const error = input.nextElementSibling;
+                if (!input.checkValidity()) {
+                    error.style.display = 'block';
+                    input.style.borderColor = '#ef4444';
+                    isValid = false;
+                } else {
+                    error.style.display = 'none';
+                    input.style.borderColor = '#cbd5e1';
+                }
+            });
+
+            if (isValid) {
+                // Simulação de conversão para Pixel/Ads
+                console.log("Evento: Lead Convertido!");
+                /* Dica de Integração Pixel:
+                   fbq('track', 'Lead', { value: 0, currency: 'BRL' }); 
+                */
+                alert('Sucesso! Entraremos em contato em breve.');
+                form.reset();
+            }
+        });
+
+        // 4. Smooth Scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

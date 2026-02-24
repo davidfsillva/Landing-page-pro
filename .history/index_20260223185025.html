@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <!-- SEO / Open Graph básico -->
+    <title>LeadFlow · Conversão estratégica para SaaS</title>
+    <meta name="description" content="Aumente suas conversões com uma página persuasiva baseada em AIDA. Geração de leads qualificados para produtos digitais e serviços.">
+    <meta property="og:title" content="LeadFlow · Estratégia que converte">
+    <meta property="og:description" content="Landpage de alta conversão com método AIDA, prova social e gatilhos mentais.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://placehold.co/1200x630/1a2b3c/white?text=LeadFlow+LP">
+    <meta property="og:url" content="https://www.leadflow.digital">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Fonte moderna e ícones (simples) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ----- VARIÁVEIS CSS (MODERNO) ----- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primaria: #2A4DF4;
+            --primaria-light: #e2e9ff;
+            --secundaria: #1B2B4F;
+            --acento: #F97316;
+            --cinza-escuro: #1E293B;
+            --cinza-medio: #475569;
+            --cinza-claro: #F8FAFC;
+            --borda: #E2E8F0;
+            --branco: #FFFFFF;
+            --sombra: 0 20px 35px -8px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.02);
+            --radius: 24px;
+            --radius-card: 20px;
+            --transition: all 0.3s ease;
+            --font: 'Inter', sans-serif;
+        }
+        body {
+            font-family: var(--font);
+            color: var(--cinza-escuro);
+            background-color: var(--branco);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 { font-weight: 700; line-height: 1.2; }
+        h2 { font-size: 2.2rem; letter-spacing: -0.02em; margin-bottom: 1rem; }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        /* ----- BOTÕES COM MICROINTERAÇÕES ----- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            gap: 10px;
+            background: var(--branco);
+            color: var(--cinza-escuro);
+            border: 1px solid var(--borda);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+        }
+        .btn-primary {
+            background: var(--primaria);
+            color: white;
+            border: none;
+            box-shadow: 0 10px 20px -8px rgba(42, 77, 244, 0.4);
+        }
+        .btn-primary:hover {
+            background: #1a3bd0;
+            transform: translateY(-3px);
+            box-shadow: 0 20px 25px -8px rgba(42, 77, 244, 0.5);
+        }
+        .btn-outline:hover {
+            background: var(--cinza-claro);
+            transform: scale(0.98);
+        }
+        /* ----- CABEÇALHO / MENU RESPONSIVO ANIMADO ----- */
+        header {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--borda);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 16px 0;
+        }
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--primaria);
+            letter-spacing: -0.02em;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--cinza-escuro);
+            transition: color 0.2s;
+            position: relative;
+        }
+        .nav-menu a:hover { color: var(--primaria); }
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primaria);
+            transition: 0.2s;
+        }
+        .nav-menu a:hover::after { width: 100%; }
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            color: var(--cinza-escuro);
+            cursor: pointer;
+        }
+        /* ----- SEÇÕES ----- */
+        section { padding: 80px 0; }
+        .hero { padding: 100px 0 80px; background: linear-gradient(145deg, #fff, var(--cinza-claro)); }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .hero h1 { font-size: 3.2rem; margin-bottom: 24px; color: var(--secundaria); }
+        .hero .highlight { color: var(--primaria); background: var(--primaria-light); padding: 0 8px; border-radius: 12px; }
+        .hero p { font-size: 1.2rem; color: var(--cinza-medio); margin-bottom: 32px; max-width: 90%; }
+        .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+
+        .problema { background: white; }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .card {
+            background: var(--branco);
+            border-radius: var(--radius-card);
+            padding: 32px 24px;
+            box-shadow: var(--sombra);
+            border: 1px solid var(--borda);
+            transition: var(--transition);
+        }
+        .card:hover { transform: translateY(-10px); border-color: var(--primaria-light); }
+        .card i { font-size: 2.6rem; color: var(--primaria); margin-bottom: 24px; }
+        .card h3 { margin-bottom: 12px; }
+
+        .solucao { background: var(--cinza-claro); }
+        .solucao-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .solucao-item {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px 36px;
+            box-shadow: var(--sombra);
+            border-left: 6px solid var(--primaria);
+        }
+
+        .autoridade { background: white; text-align: center; }
+        .autoridade-logos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            margin-top: 40px;
+            filter: grayscale(1);
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+        .autoridade-logos span { font-size: 1.8rem; font-weight: 600; color: var(--cinza-medio); }
+
+        .depoimentos { background: var(--primaria-light); }
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+        .depoimento-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius-card);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+        .depoimento-card p { font-style: italic; margin-bottom: 16px; }
+        .depoimento-card .autor { font-weight: 700; color: var(--primaria); }
+
+        .cta-final {
+            background: var(--secundaria);
+            color: white;
+            text-align: center;
+        }
+        .cta-final h2 { color: white; }
+        .cta-form {
+            max-width: 500px;
+            margin: 30px auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .input-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        .cta-form input {
+            flex: 1 1 200px;
+            padding: 16px 24px;
+            border-radius: 60px;
+            border: none;
+            font-size: 1rem;
+            outline: 2px solid transparent;
+            transition: outline 0.2s;
+        }
+        .cta-form input:focus { outline: 2px solid var(--acento); }
+        .cta-form .btn-primary { background: var(--acento); color: var(--secundaria); width: 100%; }
+        .cta-form .btn-primary:hover { background: #e56709; }
+
+        footer {
+            background: var(--cinza-escuro);
+            color: #CBD5E1;
+            padding: 40px 0;
+            border-top: 1px solid #334155;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+        }
+        .footer-grid a { color: #CBD5E1; text-decoration: none; display: block; margin: 8px 0; }
+        .footer-grid a:hover { color: white; }
+
+        /* ----- EFEITOS REVEAL (SCROLL) ----- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s, transform 0.7s;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ----- CONTADOR ANIMADO (pequeno efeito) ----- */
+        .stats {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .stat-item { text-align: center; }
+        .stat-number {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: var(--primaria);
+            line-height: 1;
+        }
+
+        /* ----- RESPONSIVO MOBILE FIRST (já adaptado) ----- */
+        @media (max-width: 900px) {
+            h2 { font-size: 1.8rem; }
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero p { max-width: 100%; }
+            .hero-cta { justify-content: center; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .menu-toggle { display: block; }
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 20px;
+                gap: 25px;
+                box-shadow: 0 30px 40px rgba(0,0,0,0.1);
+                transform: translateX(100%);
+                transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                border-top: 1px solid var(--borda);
+                backdrop-filter: blur(10px);
+                background: rgba(255,255,255,0.98);
+                z-index: 99;
+            }
+            .nav-menu.active { transform: translateX(0); }
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.5rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .input-group { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER COM MENU RESPONSIVO ANIMADO -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo">LeadFlow</div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#problema">Problema</a></li>
+                <li><a href="#solucao">Solução</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#depoimentos">Casos</a></li>
+                <li><a href="#cta" class="btn btn-primary" style="padding:10px 24px;">Começar</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO PERSUASIVO COM CTA -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <h1 class="reveal">Converta <span class="highlight">mais leads</span> com a fórmula AIDA aplicada</h1>
+                    <p class="reveal">Estratégia comprovada para empresas SaaS que querem escala. Ative gatilhos mentais, gere autoridade e dobre suas conversões em até 60 dias.</p>
+                    <div class="hero-cta reveal">
+                        <a href="#cta" class="btn btn-primary">QUERO AUMENTAR CONVERSÕES <i class="fas fa-arrow-right"></i></a>
+                        <a href="#beneficios" class="btn btn-outline">Ver benefícios</a>
+                    </div>
+                    <!-- pequeno contador animado -->
+                    <div class="stats reveal">
+                        <div class="stat-item"><span class="stat-number" data-target="340">0</span><p>clientes</p></div>
+                        <div class="stat-item"><span class="stat-number" data-target="92">0</span><p>% satisfação</p></div>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <img src="https://placehold.co/600x500/1e2b4f/white?text=Dashboard+Ilustrativo" alt="Dashboard" style="width:100%; border-radius: var(--radius); box-shadow: var(--sombra);">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SEÇÃO PROBLEMA (PAS) -->
+        <section id="problema" class="problema">
+            <div class="container">
+                <h2 class="reveal">Você atrai tráfego, mas os leads não fecham?</h2>
+                <p class="reveal" style="font-size:1.2rem; max-width:800px;">Anúncios caros, site bonito, mas pouca conversão. O problema não é seu tráfego — é a falta de uma estrutura persuasiva que conduza o visitante até a decisão.</p>
+                <div class="cards-grid">
+                    <div class="card reveal"><i class="fas fa-chart-line"></i><h3>Altos custos</h3><p>Tráfego pago desperdiçado quando a landing não converte.</p></div>
+                    <div class="card reveal"><i class="fas fa-eye-slash"></i><h3>Baixa retenção</h3><p>Visitantes dispersos, sem um caminho claro de valor.</p></div>
+                    <div class="card reveal"><i class="fas fa-ban"></i><h3>Sem autoridade</h3><p>Falta prova social e elementos que geram confiança.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SEÇÃO SOLUÇÃO (estrutura AIDA) -->
+        <section id="solucao" class="solucao">
+            <div class="container solucao-flex">
+                <h2 class="reveal">Solução: Funil persuasivo que converte</h2>
+                <div class="solucao-item reveal"><i class="fas fa-bullseye" style="color:var(--primaria); font-size:2rem; margin-right:20px;"></i> <strong>Atenção:</strong> Headline com dor e oferta clara.</div>
+                <div class="solucao-item reveal"><i class="fas fa-hand-holding-heart" style="color:var(--primaria); font-size:2rem; margin-right:20px;"></i> <strong>Interesse:</strong> Benefícios e cases reais.</div>
+                <div class="solucao-item reveal"><i class="fas fa-fire" style="color:var(--primaria); font-size:2rem; margin-right:20px;"></i> <strong>Desejo:</strong> Prova social, autoridade, escassez.</div>
+                <div class="solucao-item reveal"><i class="fas fa-check-circle" style="color:var(--primaria); font-size:2rem; margin-right:20px;"></i> <strong>Ação:</strong> CTA de alto contraste e formulário otimizado.</div>
+            </div>
+        </section>
+
+        <!-- 4. BENEFÍCIOS (cards com ícones) -->
+        <section id="beneficios" class="problema" style="background:white;">
+            <div class="container">
+                <h2 class="reveal">Por que empresas escolhem a LeadFlow</h2>
+                <div class="cards-grid">
+                    <div class="card reveal"><i class="fas fa-rocket"></i><h3>Integração pixel</h3><p>Eventos prontos para Facebook, Google e LinkedIn.</p></div>
+                    <div class="card reveal"><i class="fas fa-mobile-alt"></i><h3>Mobile first</h3><p>Experiência perfeita em qualquer dispositivo.</p></div>
+                    <div class="card reveal"><i class="fas fa-chart-pie"></i><h3>Análise A/B</h3><p>Estrutura preparada para testes de conversão.</p></div>
+                    <div class="card reveal"><i class="fas fa-tachometer-alt"></i><h3>Alta performance</h3><p>Código leve e otimizado para carregamento rápido.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PROVA SOCIAL (depoimentos) -->
+        <section id="depoimentos" class="depoimentos">
+            <div class="container">
+                <h2 class="reveal">Quem já usa, recomenda</h2>
+                <div class="depoimentos-grid">
+                    <div class="depoimento-card reveal"><p>"Conversão subiu 34% em apenas duas semanas. A estrutura realmente faz diferença."</p><span class="autor">Mariana L., CMO na GrowthBox</span></div>
+                    <div class="depoimento-card reveal"><p>"O design e as microinterações passam uma credibilidade enorme para nossos clientes."</p><span class="autor">Rafael M., Founder da SaaSUp</span></div>
+                    <div class="depoimento-card reveal"><p>"Implementação simples e resultado imediato no custo por lead."</p><span class="autor">Carla S., Gestora de Tráfego</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SEÇÃO DE AUTORIDADE -->
+        <section class="autoridade">
+            <div class="container">
+                <h2 class="reveal">Presente em mais de 340 negócios digitais</h2>
+                <div class="autoridade-logos reveal">
+                    <span>Google</span> <span>Microsoft</span> <span>HubSpot</span> <span>Salesforce</span> <span>RD Station</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA ESTRATÉGICO COM FORMULÁRIO E VALIDAÇÃO -->
+        <section id="cta" class="cta-final">
+            <div class="container">
+                <h2 class="reveal">Pronto para multiplicar suas conversões?</h2>
+                <p class="reveal" style="margin-bottom:30px; opacity:0.9;">Baixe agora o checklist gratuito da fórmula AIDA e comece a aplicar hoje.</p>
+                <form id="leadForm" class="cta-form reveal">
+                    <div class="input-group">
+                        <input type="text" id="nome" placeholder="Seu nome" required>
+                        <input type="email" id="email" placeholder="Melhor e-mail" required>
+                    </div>
+                    <div class="input-group" style="justify-content:center;">
+                        <button type="submit" class="btn btn-primary" style="background:var(--acento); max-width:300px;">QUERO CONVERTER MAIS</button>
+                    </div>
+                    <div id="formFeedback" style="min-height:24px; font-weight:500;"></div>
+                </form>
+                <!-- Nota sobre pixel: comentário explicativo -->
+                <!-- PIXEL READY: Para integração com Facebook/Meta Pixel, adicione o código base do pixel no <head> e dispatch trackLead() no submit. Ex: fbq('track', 'Lead'); -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 8. FOOTER COMPLETO -->
+    <footer>
+        <div class="container footer-grid">
+            <div><span class="logo" style="color:white;">LeadFlow</span><p style="margin:16px 0;">© 2025 LeadFlow. Conversão estratégica para SaaS.</p></div>
+            <div><h4>Produto</h4><a href="#beneficios">Benefícios</a><a href="#solucao">Como funciona</a><a href="#depoimentos">Depoimentos</a></div>
+            <div><h4>Legal</h4><a href="#">Privacidade</a><a href="#">Termos</a><a href="#">LGPD</a></div>
+            <div><h4>Contato</h4><a href="#">oi@leadflow.digital</a><div style="margin-top:16px;"><i class="fab fa-linkedin"></i> <i class="fab fa-instagram" style="margin-left:16px;"></i></div></div>
+        </div>
+    </footer>
+
+    <!-- JavaScript puro -->
+    <script>
+        (function() {
+            // 1. MENU RESPONSIVO ANIMADO
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            if (menuToggle) {
+                menuToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                });
+            }
+            // fechar ao clicar em link
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    navMenu.classList.remove('active');
+                    const icon = menuToggle?.querySelector('i');
+                    if(icon) { icon.classList.add('fa-bars'); icon.classList.remove('fa-times'); }
+                });
+            });
+
+            // 2. SCROLL SUAVE (nativo com behavior smooth)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if(href === "#") return;
+                    const target = document.querySelector(href);
+                    if(target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // 3. EFEITO REVEAL ON SCROLL (Intersection Observer)
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+            reveals.forEach(r => observer.observe(r));
+
+            // 4. CONTADOR ANIMADO (pequeno efeito interativo)
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
+            const countObserver = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        const counter = entry.target;
+                        const updateCount = () => {
+                            const target = +counter.getAttribute('data-target');
+                            const current = +counter.innerText;
+                            const increment = target / speed;
+                            if(current < target) {
+                                counter.innerText = Math.ceil(current + increment);
+                                setTimeout(updateCount, 20);
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+                        updateCount();
+                        obs.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.5 });
+            counters.forEach(c => countObserver.observe(c));
+
+            // 5. VALIDAÇÃO AVANÇADA DE FORMULÁRIO (nome, e-mail, + feedback)
+            const form = document.getElementById('leadForm');
+            const feedback = document.getElementById('formFeedback');
+            if(form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const nome = document.getElementById('nome').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    
+                    // validação nome
+                    if(nome.length < 2) {
+                        feedback.style.color = '#ffcccc';
+                        feedback.innerText = 'Digite um nome válido.';
+                        return;
+                    }
+                    // validação email (regex simples + mais requisitos)
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if(!emailRegex.test(email)) {
+                        feedback.style.color = '#ffcccc';
+                        feedback.innerText = 'E-mail parece incorreto.';
+                        return;
+                    }
+                    // validação extra: domínio comum, comprimento
+                    if(email.length < 5 || !email.includes('.')) {
+                        feedback.style.color = '#ffcccc';
+                        feedback.innerText = 'E-mail inválido (ex: nome@dominio.com)';
+                        return;
+                    }
+
+                    // se ok
+                    feedback.style.color = '#b6ffb6';
+                    feedback.innerText = '✓ Pronto! Redirecionando...';
+                    
+                    // Aqui você pode integrar com Pixel (exemplo comentado)
+                    // if (typeof fbq === 'function') fbq('track', 'Lead');
+                    // console.log('Lead gerado - pixel pronto!');
+
+                    // Simula envio
+                    setTimeout(() => {
+                        form.reset();
+                        feedback.innerText = 'Obrigado! Em breve você receberá o material.';
+                    }, 1500);
+                });
+            }
+
+            // 6. Comentário de preparação para Pixel (explicativo já incluso no HTML)
+        })();
+    </script>
+    <!-- Linha de exemplo Pixel (comentado): 
+    <script>
+        // EXEMPLO DE ATIVAÇÃO DO PIXEL (Facebook)
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'SEU_PIXEL_ID'); 
+        fbq('track', 'PageView');
+    </script>
+    -->
+</body>
+</html>
