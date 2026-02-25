@@ -206,7 +206,7 @@ header {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 600px;   /* controla largura do texto */
+    max-width: 400px;   /* controla largura do texto */
     margin-left: 0;     /* remove qualquer centralização */
     text-align: left;   /* garante alinhamento */
 }
@@ -221,15 +221,6 @@ header {
 
 .hero-cta .btn {
     margin-left: 40px; /* move botão para direita */
-}
-
-.hero-nova h1 {
-    font-size: clamp(2.3rem, 4vw, 3rem);
-}
-
-.hero-nova p {
-    font-size: 0.95rem;
-    opacity: 0.9;
 }
 
 /* BADGE */

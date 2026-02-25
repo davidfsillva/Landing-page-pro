@@ -223,15 +223,6 @@ header {
     margin-left: 40px; /* move botão para direita */
 }
 
-.hero-nova h1 {
-    font-size: clamp(2.3rem, 4vw, 3rem);
-}
-
-.hero-nova p {
-    font-size: 0.95rem;
-    opacity: 0.9;
-}
-
 /* BADGE */
 .hero-badge {
     display: inline-flex;
