@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>Sua Solução Digital | Transforme Visitantes em Clientes</title>
+<meta name="description" content="Landing page estratégica focada em conversão. Aumente seus leads e escale seu negócio com estrutura persuasiva.">
+<meta name="keywords" content="landing page, conversão, marketing digital, geração de leads">
+<meta name="author" content="Sua Marca">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Transforme Visitantes em Clientes">
+<meta property="og:description" content="Landing page estratégica otimizada para conversão.">
+<meta property="og:type" content="website">
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico">
+
+<style>
+
+/* ========================
+   RESET
+======================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ========================
+   VARIÁVEIS
+======================== */
+:root {
+    --primary: #5B7CFF;
+    --secondary: #00E0B8;
+    --bg: #0F172A;
+    --bg-light: #1E293B;
+    --text: #F1F5F9;
+    --text-muted: #94A3B8;
+    --radius: 14px;
+    --transition: all 0.3s ease;
+}
+
+/* ========================
+   UTILIDADES
+======================== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(91,124,255,0.3);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* ========================
+   HEADER
+======================== */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(15,23,42,0.9);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.menu-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ========================
+   HERO
+======================== */
+.hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    margin: 10px;
+}
+
+/* ========================
+   CARDS
+======================== */
+.grid {
+    display: grid;
+    gap: 25px;
+}
+
+.card {
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ========================
+   FORM
+======================== */
+form {
+    display: grid;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid var(--primary);
+}
+
+/* ========================
+   FOOTER
+======================== */
+footer {
+    background: var(--bg-light);
+    text-align: center;
+    padding: 40px 0;
+    color: var(--text-muted);
+}
+
+/* ========================
+   REVEAL
+======================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================
+   RESPONSIVO
+======================== */
+@media(min-width: 768px) {
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="container nav">
+        <div class="logo">SuaMarca</div>
+        <div class="menu-toggle">☰</div>
+        <nav class="menu">
+            <a href="#problema">Problema</a>
+            <a href="#solucao">Solução</a>
+            <a href="#beneficios">Benefícios</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero container">
+    <h1>Transforme Visitantes em Clientes Todos os Dias</h1>
+    <p>Landing pages estratégicas que aumentam conversões e reduzem custo por lead.</p>
+    <a href="#contato" class="btn btn-primary">Quero Mais Leads</a>
+    <a href="#solucao" class="btn btn-outline">Saiba Como</a>
+</section>
+
+<!-- PROBLEMA -->
+<section id="problema" class="container reveal">
+    <h2>Você está perdendo dinheiro com tráfego?</h2>
+    <p>Sem uma estrutura estratégica, visitantes entram e saem sem converter.</p>
+</section>
+
+<!-- SOLUÇÃO -->
+<section id="solucao" class="container reveal">
+    <h2>A Solução</h2>
+    <p>Estrutura baseada em psicologia de vendas e copy persuasiva.</p>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section id="beneficios" class="container reveal">
+    <h2>Benefícios</h2>
+    <div class="grid grid-3">
+        <div class="card">Alta Conversão</div>
+        <div class="card">Design Moderno</div>
+        <div class="card">Performance Otimizada</div>
+    </div>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section class="container reveal">
+    <h2>Depoimentos</h2>
+    <div class="grid">
+        <div class="card">“Aumentamos 73% das conversões.”</div>
+        <div class="card">“Reduziu nosso CPL pela metade.”</div>
+    </div>
+</section>
+
+<!-- AUTORIDADE -->
+<section class="container reveal">
+    <h2>Nossa Autoridade</h2>
+    <p><strong><span id="counter">0</span>+</strong> projetos entregues com sucesso.</p>
+</section>
+
+<!-- CTA -->
+<section id="contato" class="container reveal">
+    <h2>Pronto para escalar?</h2>
+    <form id="leadForm">
+        <input type="text" id="nome" placeholder="Seu Nome" required>
+        <input type="email" id="email" placeholder="Seu Email" required>
+        <textarea placeholder="Sua Mensagem"></textarea>
+        <button class="btn btn-primary" type="submit">Quero Começar</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 SuaMarca - Todos os direitos reservados
+</footer>
+
+<script>
+
+/* =========================
+   MENU RESPONSIVO
+========================= */
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+
+toggle.addEventListener("click", () => {
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+});
+
+/* =========================
+   REVEAL ON SCROLL
+========================= */
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+    reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        if(elementTop < windowHeight - 100){
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+/* =========================
+   VALIDAÇÃO AVANÇADA
+========================= */
+document.getElementById("leadForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(nome.length < 3){
+        alert("Nome precisa ter pelo menos 3 caracteres.");
+        return;
+    }
+
+    if(!emailRegex.test(email)){
+        alert("Digite um email válido.");
+        return;
+    }
+
+    alert("Lead enviado com sucesso!");
+});
+
+/* =========================
+   CONTADOR ANIMADO
+========================= */
+let count = 0;
+const counter = document.getElementById("counter");
+
+const interval = setInterval(() => {
+    if(count >= 250){
+        clearInterval(interval);
+    } else {
+        count++;
+        counter.innerText = count;
+    }
+}, 10);
+
+/* =========================
+   PIXEL (EXEMPLO)
+========================= */
+// Inserir aqui o script do Facebook Pixel ou Google Tag Manager
+// Exemplo:
+// fbq('track', 'Lead');
+
+</script>
+
+</body>
+</html>
