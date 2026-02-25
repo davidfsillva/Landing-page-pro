@@ -1,3 +1,6 @@
+/* ===============================
+   RESET & ROOT
+=================================*/
 * {
     margin: 0;
     padding: 0;
@@ -60,6 +63,9 @@ p {
     margin: 15px 0;
 }
 
+/* ===============================
+   BUTTON
+=================================*/
 .btn {
     display: inline-block;
     padding: 15px 35px;
@@ -78,7 +84,9 @@ p {
     transform: translateY(-3px);
 }
 
-/* HEADER */
+/* ===============================
+   HEADER
+=================================*/
 .header {
     position: fixed;
     width: 100%;
@@ -107,6 +115,7 @@ p {
 .nav a {
     color: var(--muted);
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .nav a:hover {
@@ -121,7 +130,9 @@ p {
     font-size: 1.5rem;
 }
 
-/* HERO */
+/* ===============================
+   HERO
+=================================*/
 .hero {
     height: 100vh;
     display: flex;
@@ -134,16 +145,13 @@ p {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(270deg, rgba(11, 15, 26, 0.116), rgb(11, 15, 26));
+    background: linear-gradient(270deg, rgba(11,15,26,0.2), rgb(11,15,26));
 }
 
-.hero-grid {
-    position: relative;
-}
 .hero-content {
+    position: relative;
     max-width: 600px;
-    padding-left: 2px;
-
+    padding-left: 20px; /* ajustado */
 }
 
 .hero-badge {
@@ -168,16 +176,10 @@ p {
 }
 
 /* ===============================
-   ABOUT SECTION UPGRADE
+   ABOUT
 =================================*/
-
 #about {
     text-align: center;
-}
-
-#about h2 {
-    margin-bottom: 60px;
-    position: relative;
 }
 
 #about h2::after {
@@ -190,27 +192,27 @@ p {
     border-radius: 3px;
 }
 
-/* GRID */
+/* ===============================
+   GRID
+=================================*/
 .grid-3 {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 35px;
 }
 
-/* CARD ESTILO PROBLEMA */
+/* ===============================
+   CARDS
+=================================*/
 .card {
-    position: relative;
     background: linear-gradient(145deg, #121A2B, #0E1524);
     padding: 40px 30px;
     border-radius: 20px;
     border: 1px solid rgba(255,255,255,0.04);
     transition: 0.35s ease;
     text-align: left;
-    overflow: hidden;
 }
 
-
-
-/* Hover mais forte */
 .card:hover {
     transform: translateY(-10px);
     border-color: var(--accent);
@@ -219,24 +221,15 @@ p {
 
 .card h3 {
     color: var(--accent);
-    font-size: 1.2rem;
     margin-bottom: 15px;
 }
 
-.card p {
-    font-size: 0.95rem;
-    color: var(--muted);
-    line-height: 1.6;
-}
-
-
-
 /* ===============================
-   METHOD SECTION IMPROVED
+   METHOD
 =================================*/
-
 .method-list {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin-top: 50px;
 }
@@ -251,7 +244,6 @@ p {
     overflow: hidden;
 }
 
-/* Linha lateral de destaque */
 .method-item::before {
     content: "";
     position: absolute;
@@ -260,10 +252,8 @@ p {
     height: 100%;
     width: 6px;
     background: var(--accent);
-    opacity: 0.8;
 }
 
-/* Número grande no fundo */
 .method-item::after {
     content: attr(data-step);
     position: absolute;
@@ -274,7 +264,6 @@ p {
     color: rgba(255,255,255,0.04);
 }
 
-/* Hover sofisticado */
 .method-item:hover {
     transform: translateY(-8px);
     border-color: var(--accent);
@@ -288,52 +277,9 @@ p {
     margin-bottom: 10px;
 }
 
-.method-item p {
-    font-size: 0.95rem;
-    color: var(--muted);
-    max-width: 500px;
-}
-
-
-
-/* CARDS */
-.grid-3 {
-    display: grid;
-    gap: 30px;
-}
-
-.card, .testimonial {
-    background: var(--card);
-    padding: 30px;
-    border-radius: var(--radius);
-}
-
-.method-list {
-    display: grid;
-    gap: 25px;
-}
-
-.method-item strong {
-    color: var(--accent);
-}
-
-/* FORM */
-.form {
-    display: grid;
-    gap: 20px;
-    max-width: 500px;
-}
-
-.form input {
-    padding: 15px;
-    border-radius: 10px;
-    border: none;
-}
-
 /* ===============================
-   CTA CLEAN HIGH-END
+   CTA
 =================================*/
-
 .cta {
     background: #0E1428;
     padding: 120px 0;
@@ -342,19 +288,12 @@ p {
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.cta h2 {
-    font-size: clamp(2rem, 4vw, 2.6rem);
-    margin-bottom: 20px;
-}
-
 .cta p {
     max-width: 600px;
-    margin: 0 auto 50px auto;
-    font-size: 1rem;
-    color: var(--muted);
+    margin: 0 auto 50px;
 }
 
-/* FORM INLINE PREMIUM */
+/* FORM */
 .form {
     max-width: 900px;
     margin: 0 auto;
@@ -363,7 +302,6 @@ p {
     gap: 15px;
 }
 
-/* INPUTS */
 .form input {
     padding: 16px 18px;
     border-radius: 12px;
@@ -374,37 +312,38 @@ p {
     transition: 0.3s ease;
 }
 
-.form input::placeholder {
-    color: rgba(255,255,255,0.4);
-}
-
 .form input:focus {
     border-color: var(--accent);
     box-shadow: 0 0 0 3px rgba(0,245,160,0.12);
     outline: none;
 }
 
-/* BOTÃO */
 .form button {
     border-radius: 12px;
     font-weight: 700;
 }
 
-/* RESPONSIVO */
-@media (max-width: 900px) {
-    .form {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* FOOTER */
+/* ===============================
+   FOOTER
+=================================*/
 .footer {
     padding: 40px 0;
     text-align: center;
     background: #05070E;
 }
 
-/* RESPONSIVE */
+/* ===============================
+   RESPONSIVE
+=================================*/
+@media (max-width: 900px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .method-list {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media (max-width: 768px) {
     .nav {
@@ -427,21 +366,10 @@ p {
 
     .hero-proof {
         flex-direction: column;
-    }
-
-
-    .method-list {
-        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .grid-3 {
         grid-template-columns: 1fr;
     }
-
-    .method-list {
-        grid-template-columns: 1fr;
-
-    }
-
-
 }
