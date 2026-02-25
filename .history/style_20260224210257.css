@@ -354,6 +354,36 @@ header {
 /* =======================================================
    CTA SECTION
 ======================================================= */
+
+/* CTA */
+.btn-hero {
+    font-size: 1rem;
+    padding: 16px 40px;
+}
+
+/* Proof Section */
+.hero-proof {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.proof-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.proof-item small {
+    color: var(--text-dim);
+}
+
+.proof-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--border-color);
+}
+
 .cta-section {
     background: linear-gradient(145deg, #0D1322, #060912);
     text-align: center;
@@ -489,5 +519,21 @@ footer {
 
     .hero-nova {
         background: url("img/pexels-pixabay-414029.jpg") center center / cover no-repeat;
+    }
+
+
+    .hero-nova {
+        padding: 120px 20px 80px;
+        background-position: center right;
+    }
+
+    .hero-proof {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .proof-divider {
+        display: none;
     }
 }
