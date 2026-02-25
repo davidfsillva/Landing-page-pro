@@ -178,7 +178,7 @@ header {
     height: 100dvh;
     display: flex;
     align-items: center;
-    background: url("img/hero.webp") center right / cover no-repeat;
+    background: url("img/pexels-pixabay-414029.jpg") center right / cover no-repeat;
     overflow: hidden;
     padding-top: 90px;
 }

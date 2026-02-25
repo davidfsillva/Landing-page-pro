@@ -178,7 +178,7 @@ header {
     height: 100dvh;
     display: flex;
     align-items: center;
-    background: url("img/hero.webp") center right / cover no-repeat;
+    background: url("img/pexels-pixabay-414029.jpg") center right / cover no-repeat;
     overflow: hidden;
     padding-top: 90px;
 }
@@ -188,7 +188,7 @@ header {
         270deg,
         rgba(11,15,26,0.65) 0%,
         rgba(11,15,26,0.35) 40%,
-        rgba(11,15,26,0.0) 70%
+        rgba(11,15,26,0.60) 70%
     );
 }
 
