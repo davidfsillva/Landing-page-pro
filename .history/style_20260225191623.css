@@ -143,8 +143,6 @@ p {
 
 .hero-content {
     max-width: 600px;
-    padding-left: 2px;
-
 }
 
 .hero-badge {
@@ -406,6 +404,11 @@ p {
 }
 
 /* RESPONSIVE */
+@media (min-width: 768px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 @media (max-width: 768px) {
     .nav {
@@ -436,13 +439,6 @@ p {
     }
 
     .grid-3 {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
-
-    .method-list {
-        grid-template-columns: 1fr;
-
-    }
-
-
 }

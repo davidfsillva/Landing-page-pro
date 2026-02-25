@@ -143,8 +143,6 @@ p {
 
 .hero-content {
     max-width: 600px;
-    padding-left: 2px;
-
 }
 
 .hero-badge {
@@ -209,7 +207,16 @@ p {
     overflow: hidden;
 }
 
-
+/* Número grande no fundo */
+.card::before {
+    content: "✖";
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 3rem;
+    color: rgba(255, 0, 0, 0.06);
+    font-weight: 900;
+}
 
 /* Hover mais forte */
 .card:hover {
@@ -219,7 +226,7 @@ p {
 }
 
 .card h3 {
-    color: var(--accent);
+    color: #ff6b6b;
     font-size: 1.2rem;
     margin-bottom: 15px;
 }
@@ -406,6 +413,11 @@ p {
 }
 
 /* RESPONSIVE */
+@media (min-width: 768px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 @media (max-width: 768px) {
     .nav {
@@ -436,13 +448,6 @@ p {
     }
 
     .grid-3 {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
-
-    .method-list {
-        grid-template-columns: 1fr;
-
-    }
-
-
 }

@@ -143,8 +143,6 @@ p {
 
 .hero-content {
     max-width: 600px;
-    padding-left: 2px;
-
 }
 
 .hero-badge {
@@ -437,11 +435,6 @@ p {
 
     .grid-3 {
         grid-template-columns: 1fr;
-    }
-
-    .method-list {
-        grid-template-columns: 1fr;
-
     }
 
 

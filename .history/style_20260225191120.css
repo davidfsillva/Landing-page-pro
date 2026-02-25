@@ -143,8 +143,6 @@ p {
 
 .hero-content {
     max-width: 600px;
-    padding-left: 2px;
-
 }
 
 .hero-badge {
@@ -209,17 +207,26 @@ p {
     overflow: hidden;
 }
 
-
+/* Número grande no fundo */
+.card::before {
+    content: "✖";
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 3rem;
+    color: rgba(255, 0, 0, 0.06);
+    font-weight: 900;
+}
 
 /* Hover mais forte */
 .card:hover {
     transform: translateY(-10px);
-    border-color: var(--accent);
-    box-shadow: 0 25px 60px -20px var(--accent);
+    border-color: rgba(255,0,0,0.3);
+    box-shadow: 0 25px 60px -20px rgba(255,0,0,0.15);
 }
 
 .card h3 {
-    color: var(--accent);
+    color: #ff6b6b;
     font-size: 1.2rem;
     margin-bottom: 15px;
 }
@@ -230,7 +237,12 @@ p {
     line-height: 1.6;
 }
 
-
+/* RESPONSIVO */
+@media (min-width: 768px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 /* ===============================
    METHOD SECTION IMPROVED
@@ -406,6 +418,11 @@ p {
 }
 
 /* RESPONSIVE */
+@media (min-width: 768px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 @media (max-width: 768px) {
     .nav {
@@ -434,15 +451,4 @@ p {
     .method-list {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .grid-3 {
-        grid-template-columns: 1fr;
-    }
-
-    .method-list {
-        grid-template-columns: 1fr;
-
-    }
-
-
 }
