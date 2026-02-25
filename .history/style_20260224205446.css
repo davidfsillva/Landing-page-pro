@@ -204,12 +204,7 @@ header {
     overflow: hidden;
 }
 
-.hero-nova::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 70% 30%, rgba(0,245,160,0.08), transparent 60%);
-}
+
 
 .hero-overlay {
     position: absolute;
@@ -432,6 +427,13 @@ footer {
     }
 
     .menu-toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
         display: block;
     }
 
@@ -453,6 +455,6 @@ footer {
     }
 
     .hero-nova {
-        background: url("img/pexels-pixabay-414029.jpg") center center / cover no-repeat;
+        background: url("img/heromobile.webp") center center / cover no-repeat;
     }
 }

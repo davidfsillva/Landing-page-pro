@@ -200,7 +200,7 @@ header {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url("img/pexels-pixabay-414029.jpg") center center / cover no-repeat;
+    background: url("img/pexels-ardit-mbrati-216809103-18187618.jpg") center center / cover no-repeat;
     overflow: hidden;
 }
 
@@ -432,6 +432,13 @@ footer {
     }
 
     .menu-toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
         display: block;
     }
 
@@ -453,6 +460,6 @@ footer {
     }
 
     .hero-nova {
-        background: url("img/pexels-pixabay-414029.jpg") center center / cover no-repeat;
+        background: url("img/heromobile.webp") center center / cover no-repeat;
     }
 }

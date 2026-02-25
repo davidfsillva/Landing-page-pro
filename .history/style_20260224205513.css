@@ -216,7 +216,7 @@ header {
     inset: 0;
     background: linear-gradient(
         90deg,
-        rgba(11,15,26,0.95) 20%,
+        rgba(11,15,26,0.95) 10%,
         rgba(11,15,26,0.85) 50%,
         rgba(11,15,26,0.6) 100%
     );
@@ -432,6 +432,13 @@ footer {
     }
 
     .menu-toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
         display: block;
     }
 
@@ -453,6 +460,6 @@ footer {
     }
 
     .hero-nova {
-        background: url("img/pexels-pixabay-414029.jpg") center center / cover no-repeat;
+        background: url("img/heromobile.webp") center center / cover no-repeat;
     }
 }
