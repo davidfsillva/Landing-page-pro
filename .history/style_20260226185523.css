@@ -466,9 +466,9 @@ a {
     }
 
       .method-item::after {
-        font-size: 2.5rem;
-        top: 15px;
-        right: 20px;
+    font-size: 2.5rem;
+    top: 15px;
+    right: 20px;
     }
 
     .method-item {

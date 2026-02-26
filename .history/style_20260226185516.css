@@ -466,12 +466,12 @@ a {
     }
 
       .method-item::after {
-        font-size: 2.5rem;
-        top: 15px;
-        right: 20px;
-    }
+    font-size: 2.5rem;
+    top: 15px;
+    right: 20px;
+  }
 
-    .method-item {
-        padding: 30px 25px 30px 70px;
-    }
+  .method-item {
+    padding: 30px 25px 30px 70px;
+  }
 }
