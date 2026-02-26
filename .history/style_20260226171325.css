@@ -189,6 +189,11 @@ p {
     border-radius: 3px;
 }
 
+/* GRID */
+.grid-3 {
+    display: grid;
+    gap: 35px;
+}
 
 /* CARD ESTILO PROBLEMA */
 .card {
@@ -293,7 +298,6 @@ p {
 /* CARDS */
 .grid-3 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
@@ -325,21 +329,6 @@ p {
     margin-top: 15px;
     font-weight: 600;
     color: var(--accent);
-}
-
-.testimonial img {
-    width: 100%;
-    border-radius: 12px;
-    margin: 0 auto 20px auto;
-    display: block;
-}
-
-#results {
-    text-align: center;
-}
-
-.testimonial {
-    text-align: center;
 }
 
 /* FORM */
@@ -467,6 +456,12 @@ p {
         grid-template-columns: 1fr;
 
     }
+
+
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
 }
 
 
+}

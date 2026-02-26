@@ -189,6 +189,11 @@ p {
     border-radius: 3px;
 }
 
+/* GRID */
+.grid-3 {
+    display: grid;
+    gap: 35px;
+}
 
 /* CARD ESTILO PROBLEMA */
 .card {
@@ -327,21 +332,6 @@ p {
     color: var(--accent);
 }
 
-.testimonial img {
-    width: 100%;
-    border-radius: 12px;
-    margin: 0 auto 20px auto;
-    display: block;
-}
-
-#results {
-    text-align: center;
-}
-
-.testimonial {
-    text-align: center;
-}
-
 /* FORM */
 .form {
     display: grid;
@@ -466,6 +456,11 @@ p {
     .method-list {
         grid-template-columns: 1fr;
 
+    }
+
+
+    .grid-3 {
+        grid-template-columns: 1fr;
     }
 }
 

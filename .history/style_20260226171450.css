@@ -189,6 +189,11 @@ p {
     border-radius: 3px;
 }
 
+/* GRID */
+.grid-3 {
+    display: grid;
+    gap: 35px;
+}
 
 /* CARD ESTILO PROBLEMA */
 .card {
@@ -466,6 +471,11 @@ p {
     .method-list {
         grid-template-columns: 1fr;
 
+    }
+
+
+    .grid-3 {
+        grid-template-columns: 1fr;
     }
 }
 
