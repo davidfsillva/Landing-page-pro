@@ -5,7 +5,7 @@
      1. MENU RESPONSIVO
   ===================================================== */
   const menuToggle = document.getElementById("menuToggle");
-  const navMenu = document.getElementById("nav");
+  const navMenu = document.getElementById("navMenu");
 
   if (menuToggle && navMenu) {
     menuToggle.addEventListener("click", () => {

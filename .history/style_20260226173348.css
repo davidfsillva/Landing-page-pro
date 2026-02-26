@@ -282,17 +282,6 @@ a {
     margin-bottom: 10px;
 }
 
-.solution {
-    text-align: center;
-}
-
-.section-sub {
-    max-width: 650px;
-    margin: 0 auto;
-    font-size: 1rem;
-    color: var(--muted);
-}
-
 /* ===============================
    TESTIMONIAL
 =================================*/

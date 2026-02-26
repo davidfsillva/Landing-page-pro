@@ -271,26 +271,14 @@ a {
 }
 
 .method-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     border-color: var(--accent);
-    box-shadow: 0 25px 60px -20px rgba(0,245,160,0.4);
 }
 
 .method-item strong {
     display: block;
     color: var(--text);
     margin-bottom: 10px;
-}
-
-.solution {
-    text-align: center;
-}
-
-.section-sub {
-    max-width: 650px;
-    margin: 0 auto;
-    font-size: 1rem;
-    color: var(--muted);
 }
 
 /* ===============================

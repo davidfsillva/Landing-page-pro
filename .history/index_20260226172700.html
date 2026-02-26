@@ -271,24 +271,16 @@
 
         <h2>Book Your Free Strategy Call</h2>
 
-        <form class="form contact-form">
-
-            <div class="input-group">
-                <input type="text" placeholder="Full Name" required>
-            </div>
-
-            <div class="input-group">
-                <input type="email" placeholder="Email Address" required>
-            </div>
-
-            <div class="input-group">
-                <input type="tel" placeholder="Phone Number" required>
-            </div>
+        <form id="leadForm" class="form">
+            <input id="nome" type="text" placeholder="Full Name" required>
+            <input id="email" type="email" placeholder="Email Address" required>
+            <input id="telefone" type="tel" placeholder="Phone Number" required>
 
             <button type="submit" class="btn btn-primary btn-full">
-                Schedule My Free Call
+                Schedule My Call
             </button>
 
+            <p id="formFeedback" class="form-feedback"></p>
         </form>
     </div>
 </section>
