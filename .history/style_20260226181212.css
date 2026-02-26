@@ -163,7 +163,7 @@ a {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: url('img/hero.webp') center right/cover no-repeat;
+    background: url('') center right/cover no-repeat;
     position: relative;
     padding-top: 100px;
 }
