@@ -406,63 +406,7 @@ p {
     margin: 0 auto 40px auto;
 }
 
-/* CONTACT CONTAINER */
-.contact-container {
-    max-width: 700px;
-    text-align: center;
-}
 
-/* SUBTITLE */
-.contact-sub {
-    margin-bottom: 40px;
-    color: var(--muted);
-    font-size: 0.95rem;
-}
-
-/* FORM LAYOUT */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* INPUT GROUP */
-.input-group {
-    position: relative;
-}
-
-/* INPUT STYLE */
-.contact-form input {
-    width: 100%;
-    padding: 18px 20px;
-    border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.08);
-    background: #0F1625;
-    color: var(--text);
-    font-size: 0.95rem;
-    transition: 0.3s ease;
-}
-
-/* INPUT FOCUS EFFECT */
-.contact-form input:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 4px rgba(0,245,160,0.12);
-    outline: none;
-}
-
-/* FULL WIDTH BUTTON */
-.btn-full {
-    width: 100%;
-    padding: 18px;
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-/* BUTTON HOVER PREMIUM */
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px -10px rgba(0,245,160,0.5);
-}
 
 /* INPUTS */
 .form input {
