@@ -265,8 +265,6 @@ a {
     width: 6px;
     height: 100%;
     background: var(--accent);
-    border-top-left-radius: var(--radius);
-    border-bottom-left-radius: var(--radius);
 }
 
 .method-item::after {

@@ -82,7 +82,6 @@ a {
     color: var(--accent);
     font-weight: 600;
 }
-
 /* ===============================
    BUTTONS
 =================================*/
@@ -253,8 +252,6 @@ a {
     border-radius: var(--radius);
     border: 1px solid rgba(255,255,255,0.05);
     transition: var(--transition);
-    overflow: hidden; /* IMPORTANTE */
-
 }
 
 .method-item::before {
@@ -265,8 +262,6 @@ a {
     width: 6px;
     height: 100%;
     background: var(--accent);
-    border-top-left-radius: var(--radius);
-    border-bottom-left-radius: var(--radius);
 }
 
 .method-item::after {
