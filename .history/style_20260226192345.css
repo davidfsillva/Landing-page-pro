@@ -435,20 +435,7 @@ a {
         background: url('img/heromobile.webp') center center/cover no-repeat;
     }
 
-    .nav {
-        display: none;
-        flex-direction: column;
-        background: var(--bg-dark);
-        position: absolute;
-        top: 80px;
-        right: 20px;
-        padding: 20px;
-        border-radius: 12px;
-    }
 
-    .nav.active {
-        display: flex;
-    }
 
     .menu-toggle {
         display: block;
