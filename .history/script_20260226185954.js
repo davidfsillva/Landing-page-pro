@@ -84,7 +84,7 @@
       const telefone = document.getElementById("telefone").value.trim();
       const telDigits = telefone.replace(/\D/g, "");
 
-      feedback.style.color = "#ffffff";
+      feedback.style.color = "#ff4d4d";
       feedback.textContent = "";
 
       if (nome.length < 5 || !/\s/.test(nome)) {
