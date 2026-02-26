@@ -154,10 +154,6 @@ a {
     transition: 0.3s ease;
 }
 
-.nav a:hover::after {
-    width: 100%;
-}
-
 .nav-cta {
     color: var(--accent);
 }

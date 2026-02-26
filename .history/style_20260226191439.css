@@ -135,27 +135,13 @@ a {
 }
 
 .nav a {
-    position: relative;
-    padding-bottom: 4px;
+    color: var(--muted);
+    font-weight: 500;
+    transition: var(--transition);
 }
 
 .nav a:hover {
     color: var(--accent);
-}
-
-.nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background: var(--accent);
-    transition: 0.3s ease;
-}
-
-.nav a:hover::after {
-    width: 100%;
 }
 
 .nav-cta {
@@ -255,7 +241,25 @@ a {
     bottom: 9px;
 }
 
+.nav a {
+    position: relative;
+    padding-bottom: 4px;
+}
 
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
 
 
 
